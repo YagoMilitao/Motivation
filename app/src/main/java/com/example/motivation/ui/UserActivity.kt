@@ -14,13 +14,7 @@ class UserActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var binding: ActivityUserBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        /*enableEdgeToEdge()
-        setContentView(R.layout.activity_user)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
-        }*/
+
         binding = ActivityUserBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
@@ -34,6 +28,9 @@ class UserActivity : AppCompatActivity(), View.OnClickListener {
         verifyUserName()
     }
 
+    /**
+     * Verifica se usuário já preencheu o nome
+     * */
     private fun verifyUserName() {
         val name = SecurityPreferences(this).getString(MotivationConstants.KEY.USER_NAME)
         if(name!=""){
@@ -42,6 +39,9 @@ class UserActivity : AppCompatActivity(), View.OnClickListener {
         }
     }
 
+    /**
+     * Tratamento de clicks dos elementos
+     * */
     override fun onClick(view: View?) {
         if (view != null) {
             if (view.id == R.id.button_save) {
@@ -50,12 +50,18 @@ class UserActivity : AppCompatActivity(), View.OnClickListener {
         }
     }
 
+    /**
+     * Salva o nome do usuário para utilizações futuras
+     * */
     private fun handlesave() {
+        // Obtém o nome
         val name = binding.editName.text.toString()
+        // Verifica se usuário não preencheu o nome
         if (name != "") {
+            // Salva os dados do usuário e redireciona para as frases
             SecurityPreferences(this).storeString(MotivationConstants.KEY.USER_NAME,name)
-
             startActivity(Intent(this, MainActivity::class.java))
+            // Impede que seja possível voltar a Activity
             finish()
         } else {
             Toast.makeText(
