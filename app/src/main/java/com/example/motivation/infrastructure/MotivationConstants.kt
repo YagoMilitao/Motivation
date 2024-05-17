@@ -13,4 +13,10 @@ class MotivationConstants private constructor() {
         const val PROFILE = 2
         const val CLOCK = 3
     }
+
+    object LANGUAGE {
+        const val ENGLISH = "en"
+        const val PORTUGUESE = "pt"
+        const val FRENCH = "fr"
+    }
 }

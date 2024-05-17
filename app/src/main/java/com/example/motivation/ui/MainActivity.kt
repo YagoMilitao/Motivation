@@ -10,11 +10,13 @@ import com.example.motivation.R
 import com.example.motivation.data.Mock
 import com.example.motivation.infrastructure.SecurityPreferences
 import com.example.motivation.databinding.ActivityMainBinding
+import java.util.Locale
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     private lateinit var binding: ActivityMainBinding
     private var categoryId = MotivationConstants.FILTER.ALL
+    private val mock: Mock = Mock()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -55,6 +57,14 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         }
     }
     /**
+     * Atualiza frase de motivação
+     * */
+    private fun refreshPhrase(){
+        Locale.getDefault()
+        binding.textPhrase.text = mock.getPhrase(categoryId, Locale.getDefault().language)
+    }
+
+    /**
      * Busca o nome do usuário
      * */
     @SuppressLint("SetTextI18n")
@@ -88,7 +98,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun handleNexPhrase(){
-        val phrase = Mock().getPhrase(categoryId)
+        Locale.getDefault()
+        val phrase = Mock().getPhrase(categoryId, Locale.getDefault().language)
         binding.textPhrase.text=phrase
 
     }
