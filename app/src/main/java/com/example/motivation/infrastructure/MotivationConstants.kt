@@ -19,4 +19,5 @@ class MotivationConstants private constructor() {
         const val PORTUGUESE = "pt"
         const val FRENCH = "fr"
     }
+
 }
