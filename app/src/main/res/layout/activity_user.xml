@@ -1,5 +1,4 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
@@ -16,7 +15,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="42dp"
         android:fontFamily="@font/cabin"
-        android:text="Vamos começar?"
+        android:text="@string/lets_begin"
         android:textColor="@color/white"
         android:textSize="30sp" />
 

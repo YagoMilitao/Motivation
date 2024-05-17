@@ -70,7 +70,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     @SuppressLint("SetTextI18n")
     private fun handleUserName() {
         val name = SecurityPreferences(this).getString(MotivationConstants.KEY.USER_NAME)
-        binding.textUserName.text = "Olá, ${name}!"
+        binding.textUserName.text = " Hi, ${name}!"
     }
     /**
      * Trata o filtro aplicado para as frases
