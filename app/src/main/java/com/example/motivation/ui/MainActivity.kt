@@ -54,6 +54,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             handleNexPhrase()
         } else if (view.id in listOf(R.id.image_all, R.id.image_profile, R.id.image_clock)) {
             handleFilter(view.id)
+            refreshPhrase()
         }
     }
     /**
