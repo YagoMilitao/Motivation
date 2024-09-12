@@ -104,7 +104,6 @@ Use the `BLANK_README.md` to get started.
 
 This project uses these technologies.
 
-
 * [![Kotlin][Kotlin.org]][Kotlin-url]
 * [![AndroidStudio][AndroidStudio.com]][AndroidStudio-url]
   
