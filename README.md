@@ -102,10 +102,11 @@ Use the `BLANK_README.md` to get started.
 
 ### Built With
 
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
+This project uses these technologies.
 
 
 * [![Kotlin][Kotlin.org]][Kotlin-url]
+* [![AndroidStudio][AndroidStudio.com]][AndroidStudio-url]
   
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -175,4 +176,6 @@ Project Link: [https://github.com/your_username/repo_name](https://github.com/yo
 [JQuery-url]: https://jquery.com 
 [Kotlin.org]:https://img.shields.io/badge/Kotlin-7F52FF?style=for-the-badge&logo=Kotlin&logoColor=white
 [Kotlin-url]:https://kotlinlang.org
+[AndroidStudio.com]:https://img.shields.io/badge/AndroidStudio-3DDC84?style=flat&logo=android-studio&logoColor=white
+[AndroidStudio-url]:https://developer.android.com/studio?gad_source=1&gclid=CjwKCAjwlbu2BhA3EiwA3yXyuxignR1emdm8wGBru44j2AIPNBtruzXoIJCok4_QN1KOQHbWyPkJ6BoCr78QAvD_BwE&gclsrc=aw.ds&hl=pt-br
 
